@@ -61,26 +61,6 @@ boxes.forEach((box) => {
    });
 });
 
-
-
-
-// reset.addEventListener('click', () => {
-//   boxes.forEach((box) => {
-//     box.innerText = '';
-//     box.disabled = false;
-//   });
-//   winner.classList.add('hide_winner');
-//   terno = true;
-// });
-
-// newbtn.addEventListener('click', () => {
-//   boxes.forEach((box) => {
-//     box.innerText = '';
-//     box.disabled = false;
-//   });
-//   winner.classList.add('hide_winner');
-//   terno = true;
-// });
 reset.addEventListener('click', () => {
   boxes.forEach((box) => {
     box.innerText = '';
