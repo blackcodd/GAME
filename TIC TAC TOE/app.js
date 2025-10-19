@@ -17,10 +17,23 @@ let ans = [
 ];
 
 function showWinner(winnerText) {
-  winner.innerText = `Winner:${winnerText}`; 
+  if(winnerText === 'It is a Tie!'){
+    winner.innerText = `It's a Tie!`;
+  }
+  else
+  winner.innerText = `Winner:${winnerText}`;
+
   hide_winner.classList.remove('afterwin');
 }
-
+function checkTie() {
+  for (let box of boxes) {
+    if (box.innerText === '') {
+      return false;
+    }
+  }
+  return true;
+}
+tie = true;
 boxes.forEach((box) => {
   box.addEventListener('click', () => {
     let audio = new Audio("assets/computer-mouse-click-352734.mp3");
@@ -29,7 +42,8 @@ boxes.forEach((box) => {
     box.innerText = terno ? 'X' : 'O';
     box.disabled = true;
     terno = !terno;
-    tie=true;
+
+
 
     for (let i = 0; i < ans.length; i++) {
       let [a, b, c] = ans[i];
@@ -37,17 +51,22 @@ boxes.forEach((box) => {
         boxes[a].innerText !== '' &&
         boxes[a].innerText === boxes[b].innerText &&
         boxes[b].innerText === boxes[c].innerText
-      ) {
-        tie=false;
+      ) 
+      {
+        tie = false;
         showWinner(boxes[a].innerText);
         boxes.forEach((b) => (b.disabled = true));
       }
+      
+    } 
+    if (tie && checkTie()) {
+      showWinner('It is a Tie!');
     }
-    if(tie){
-      showWinner("No one! It's a Tie");
-    }
-  });
+   });
 });
+
+
+
 
 // reset.addEventListener('click', () => {
 //   boxes.forEach((box) => {
