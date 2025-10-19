@@ -22,7 +22,6 @@ function showWinner(winnerText) {
   }
   else
   winner.innerText = `Winner:${winnerText}`;
-
   hide_winner.classList.remove('afterwin');
 }
 function checkTie() {
@@ -42,9 +41,6 @@ boxes.forEach((box) => {
     box.innerText = terno ? 'X' : 'O';
     box.disabled = true;
     terno = !terno;
-
-
-
     for (let i = 0; i < ans.length; i++) {
       let [a, b, c] = ans[i];
       if (
