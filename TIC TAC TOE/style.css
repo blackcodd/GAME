@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dfbebe;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.container {
+  height: 80vh;
+  width: 75vh;
+  margin: 70px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 1.5px;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border: 2px solid rgb(38, 17, 17);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vmin;
+  cursor: pointer;
+  color: #7d3232;
+  background-color: #fdfdfd;
+  transition: 0.3s;
+}
+
+.box:hover {
+  background-color: #f0dcdc;
+}
+
+.reset_game {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.new_gamebtn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #4a0b0b;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.winner {
+  font-size: 22px;
+  margin-top: 0px;
+  color: #48d76f;
+  font-weight: bold;
+}
+
+.afterwin {
+  display: none;
+}
